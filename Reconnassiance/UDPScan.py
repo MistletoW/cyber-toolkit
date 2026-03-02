@@ -6,7 +6,7 @@ def UDPScan(host):
     print(f"Scanning UDP ports on {host}")
 
     #Send UDP Packets to each port
-    ans, unans = sr(IP(dst=host)/UDP(dports=ports), timeout=3, verbose=0)
+    ans, unans = sr(IP(dst=host)/UDP(dport=ports), timeout=3, verbose=0)
     
     #Track which ports got ICMP unreachable
     closed = set()
