@@ -15,7 +15,7 @@ def run_nmap():
     log_file = "nmap_scan_log.txt"
     print(f"Logging scan results to {log_file}...")
 
-    with(log_file, "w") as f:
+    with open(log_file, "w") as f:
         f.write(result.stdout)
 
     print(f"Results saved to {log_file}")
